@@ -1,7 +1,9 @@
 # Raytracer
 
 After discovering Andrew Kensler's version of Paul Heckbert's Ray Tracer Business Card Challenge, I thought that it would be interesting
-to create a version of the raytracer that would easily accept anyone's initals and render an image with them.  
+to create a version of the raytracer that would easily accept anyone's initals and render an image with them.
+
+Andrew Kensler's version can be found here: http://eastfarthing.com/blog/2016-01-12-card/
 
 Kensler's version of the raytracer uses an integer array (1x9), which renders a sphere every place there is a 1 when every number
 in the integer array is converted back to binary.
