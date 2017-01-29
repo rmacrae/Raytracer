@@ -10,10 +10,13 @@ int initialcreator()
 	char initials[3];
 	printf("Please enter your initials (ex. fjc): ");
 	
+	// reads the initials from the user.
 	for(int i = 0; i < 3; i++)
 	{
 		initials[i] = fgetc(stdin);
 	}
+
+	// initialize matrix for initials.
 	int matrix[7][21];
 	for (int i = 0; i < 7; i++)
 	{
@@ -24,7 +27,10 @@ int initialcreator()
 	}
 	for (int i = 0; i < 3; i++)
 	{
-
+		/* opens file containing representations of letters in binary
+		*  searches the file and then copies the individual letter into 
+		*  the two dimensional array.
+		*/
 		FILE *input;
 		input = fopen("letters.txt", "r");
 		char f = fgetc(input);
@@ -53,12 +59,16 @@ int initialcreator()
 		fclose(input);
 	}
 
+	// initialize every element in the bits array to zero.
 	for (int i = 0; i < 7; i++)
 	{
 		bits[i] = 0;
 	}
 
-
+	/* converts every row from binary to decimal and saves them into the bits
+	*  array.  It saves them in reverse order in order to be correctly read
+	*  by the raytracer.
+	*/
 	for (int i = 0; i < 7; i++)
 	{
 		for (int z = 0; z < 21; z++)
@@ -222,8 +232,11 @@ vec shade(
 // Driver routine for ray generation and image writing.
 int main()
 {
+	// calls function for creating bits array for user's initials.
 	initialcreator();
 	printf("Image is now rendering.  This may take a few minutes...\n");
+	
+	// writes the image to a file "image.ppm"
 	FILE *fp;
 	fp = fopen("image.ppm","w");
     // Write PPM header
