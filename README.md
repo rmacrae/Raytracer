@@ -20,3 +20,4 @@ The resulting image is saved in a ppm image with a resolution of 1024x1024.  Thi
 
 An example of the final product using my initials (jrm) can be seen below: 
 
+![alt tag](https://github.com/rmacrae/Raytracer/blob/master/image.jpg)
