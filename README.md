@@ -16,7 +16,7 @@ The rest of the ray tracer functions uses Kensler's design, with the only change
 and the resolution of the image, which was increased to reduce the size of the initials, relative to the total image.
 
 The resulting image is saved in a ppm image with a resolution of 1024x1024.  This can be easily converted to another format using the
-"convert" command in linux.
+"convert" command (part of imagemagick) in linux.
 
 An example of the final product using my initials (jrm) can be seen below: 
 
